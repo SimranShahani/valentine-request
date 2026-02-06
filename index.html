@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>System Request</title>
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      border: 1px solid #30363d;
+      padding: 30px;
+      max-width: 420px;
+      text-align: left;
+    }
+    button {
+      background-color: #238636;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-right: 10px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-family: monospace;
+    }
+    button.try {
+      background-color: #da3633;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <p><strong>SYSTEM ALERT ⚠️</strong></p>
+  <p>Pending request detected.</p>
+  <p>
+    Request: <strong>Will you be my Valentine?</strong><br>
+    Date: 14 Feb<br>
+    Plan: Pub crawl (already booked 🍻)
+  </p>
+  <p>Action required.</p>
+
+  <button onclick="yes()">YES</button>
+  <button class="try" onclick="tryAgain()">TRY AGAIN</button>
+
+  <p id="response"></p>
+</div>
+
+<script>
+  function yes() {
+    document.getElementById("response").innerText =
+      "✅ Request accepted. You are locked in. No refunds.";
+  }
+
+  function tryAgain() {
+    document.getElementById("response").innerText =
+      "❌ Invalid response. You already made reservations.";
+  }
+</script>
+
+</body>
+</html>
